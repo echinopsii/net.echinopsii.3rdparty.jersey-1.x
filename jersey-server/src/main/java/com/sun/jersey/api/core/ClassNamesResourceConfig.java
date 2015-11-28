@@ -136,7 +136,6 @@ public class ClassNamesResourceConfig extends DefaultResourceConfig {
     }
 
     private static ClassLoader getClassLoader() {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();        
-        return (classLoader == null) ? ClassNamesResourceConfig.class.getClassLoader() : classLoader;
+	return ClassNamesResourceConfig.class.getClassLoader();
     }    
 }

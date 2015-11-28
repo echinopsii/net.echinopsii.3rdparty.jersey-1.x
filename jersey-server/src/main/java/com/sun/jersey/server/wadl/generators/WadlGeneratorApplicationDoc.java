@@ -142,7 +142,7 @@ public class WadlGeneratorApplicationDoc implements WadlGenerator {
         final int i = name.lastIndexOf('.');
         name = (i != -1) ? name.substring(0, i) : "";
         final JAXBContext c = JAXBContext.newInstance(name,
-                Thread.currentThread().getContextClassLoader());
+                WadlGeneratorApplicationDoc.class.getClassLoader());
         final Unmarshaller m = c.createUnmarshaller();
         final Object obj = _applicationDocsFile != null
             ? m.unmarshal( _applicationDocsFile ) : m.unmarshal( _applicationDocsStream );

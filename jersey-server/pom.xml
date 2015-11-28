@@ -49,7 +49,7 @@
         <artifactId>jersey-project</artifactId>
         <version>1.19</version>
     </parent>
-    <artifactId>jersey-server</artifactId>
+    <artifactId>net.echinopsii.3rdparty.jersey-server</artifactId>
     <packaging>jar</packaging>
     <name>jersey-server</name>
     <dependencies>

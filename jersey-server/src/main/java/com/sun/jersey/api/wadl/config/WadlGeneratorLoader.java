@@ -193,10 +193,7 @@ class WadlGeneratorLoader {
             }
         } else if (InputStream.class.equals(paramClazz) && propertyValue instanceof String) {
             final String resource = propertyValue.toString();
-            ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            if (loader == null) {
-                loader = WadlGeneratorLoader.class.getClassLoader();
-            }
+            ClassLoader loader = WadlGeneratorLoader.class.getClassLoader();
             final InputStream is = loader.getResourceAsStream(resource);
             if (is == null) {
                 String message = "The resource '" + resource + "' does not exist.";
